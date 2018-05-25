@@ -7,7 +7,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-<<<<<<< HEAD
         <h1>The F2E - 前端修練精神時光屋</h1>
         <h2>目前報名人數： <span id="signUpTotal"></span></h2>
         <form id="MySubmit">
@@ -18,30 +17,14 @@
         <hr>
         
         <div id="person">
-=======
-        <h1>TheF2E 報名結果驗證</h1>
-        <form id="MySubmit">
-            <label for="MyEmail">Email</label>
-            <input type="email" name="MyEmail" id="MyEmail">
-            <input type="submit" value="送出">
-        </form>
-        <hr>
-        
-        <div id="person" hidden>
->>>>>>> 151f8f73b079ee49069085a69b1accda568aa787
             <table>
                 <tr>
                     <th>暱稱</th>
                     <th>報名時間</th>
                 </tr>
                 <tr>
-<<<<<<< HEAD
                     <td><span class="register register-NickName"></span></td>
                     <td><span class="register register-Time"></span></td>
-=======
-                    <td><span class="NickName"></span></td>
-                    <td><span class="Time"></span></td>
->>>>>>> 151f8f73b079ee49069085a69b1accda568aa787
                 </tr>
             </table>
             
@@ -51,7 +34,6 @@
 
         <script>
             $(document).ready( function () {
-<<<<<<< HEAD
                 $("#person").hide();
                 getSignUpTotal($("#signUpTotal"));
 
@@ -62,12 +44,6 @@
                     // console.log(email);
 
                     // $(".register").html("");
-=======
-                $("#MySubmit").on( "submit", function(){
-
-                    let email = $("#MyEmail").val();
-                    console.log(email);
->>>>>>> 151f8f73b079ee49069085a69b1accda568aa787
 
                     $.ajax({
                         type: "post",
@@ -80,7 +56,6 @@
                             console.log("failed to verify");
                         },
                         success: function(data) {
-<<<<<<< HEAD
 
                             $(".register").html("");
 
@@ -89,13 +64,6 @@
                                 person.show("slow");
 
                                 person.find(".register-NickName").html(data.nickName);
-=======
-                            if (data.success) {
-                                let person = $("#person");
-                                person.removeAttr("hidden");
-
-                                person.find(".NickName").html(data.nickName);
->>>>>>> 151f8f73b079ee49069085a69b1accda568aa787
 
                                 let timeReadable = new Date(data.timeStamp);
 
@@ -105,36 +73,24 @@
                                 let hh = timeReadable.getUTCHours();
                                 let mm = timeReadable.getUTCMinutes();
 
-<<<<<<< HEAD
                                 person.find(".register-Time").html(yyyy + "/" + month + "/" + date + " " + hh + ":" + mm );
-=======
-                                person.find(".Time").html(yyyy + "/" + month + "/" + date + " " + hh + ":" + mm );
->>>>>>> 151f8f73b079ee49069085a69b1accda568aa787
 
                                 person.find("th,td").css({
                                     "border": "1px solid lightgray",
                                     "padding": "5px"
                                 });
-<<<<<<< HEAD
                             } else {
                                 person.hide("slow");
                             }
                             $("#message").html(data.message);
                             // console.log(data);
                             // console.log(Date(data.timeStamp));
-=======
-                            }
-                            $("#message").html(data.message);
-                            console.log(data);
-                            console.log(Date(data.timeStamp));
->>>>>>> 151f8f73b079ee49069085a69b1accda568aa787
                         }
                     });
 
                     event.preventDefault();
                 });
             });
-<<<<<<< HEAD
 
 
             function getSignUpTotal(node) {
@@ -162,8 +118,6 @@
 
                 });
             }
-=======
->>>>>>> 151f8f73b079ee49069085a69b1accda568aa787
         </script>
     </body>
 </html>
