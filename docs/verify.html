@@ -1,0 +1,84 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8;">
+        <title>TheF2E 報名確認</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>TheF2E 報名結果驗證</h1>
+        <form id="MySubmit">
+            <label for="MyEmail">Email</label>
+            <input type="email" name="MyEmail" id="MyEmail">
+            <input type="submit" value="送出">
+        </form>
+        <hr>
+        
+        <div id="person" hidden>
+            <table>
+                <tr>
+                    <th>暱稱</th>
+                    <th>報名時間</th>
+                </tr>
+                <tr>
+                    <td><span class="NickName"></span></td>
+                    <td><span class="Time"></span></td>
+                </tr>
+            </table>
+            
+            
+        </div>
+        <p id="message"></p>
+
+        <script>
+            $(document).ready( function () {
+                $("#MySubmit").on( "submit", function(){
+
+                    let email = $("#MyEmail").val();
+                    console.log(email);
+
+                    $.ajax({
+                        type: "post",
+                        url: "https://www.thef2e.com/api/isSignUp/",
+                        data: {
+                            "email": email
+                        },
+                        dataType: "json",
+                        error: function() {
+                            console.log("failed to verify");
+                        },
+                        success: function(data) {
+                            if (data.success) {
+                                let person = $("#person");
+                                person.removeAttr("hidden");
+
+                                person.find(".NickName").html(data.nickName);
+
+                                let timeReadable = new Date(data.timeStamp);
+
+                                let yyyy = timeReadable.getUTCFullYear();
+                                let month = timeReadable.getUTCMonth()+1;
+                                let date = timeReadable.getUTCDate();
+                                let hh = timeReadable.getUTCHours();
+                                let mm = timeReadable.getUTCMinutes();
+
+                                person.find(".Time").html(yyyy + "/" + month + "/" + date + " " + hh + ":" + mm );
+
+                                person.find("th,td").css({
+                                    "border": "1px solid lightgray",
+                                    "padding": "5px"
+                                });
+                            }
+                            $("#message").html(data.message);
+                            console.log(data);
+                            console.log(Date(data.timeStamp));
+                        }
+                    });
+
+                    event.preventDefault();
+                });
+            });
+        </script>
+    </body>
+</html>
