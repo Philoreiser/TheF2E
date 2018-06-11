@@ -1,19 +1,57 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The F2E 前端修煉 - To-do List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
     
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- Bootstrap 4.1.0 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
 </head>
 <body>
-    <button id="btn-test">click!</button>
+    <div class="header">
+        <div class="todo-bar">
+            <span class="todo-status" style="color: #FFFFFF">My Tasks</span>
+        </div>
+        <div class="todo-bar">
+            <span class="todo-status">In Progress</span>
+        </div>
+        <div class="todo-bar">
+            <span class="todo-status">Completed</span>
+        </div> 
+    </div>
+    <div class="todo-view">
+        <input type="text" id="new-todo" class="todo-input" placeholder="+ Add Task">
+        <div class="todo-card">
+            <table>
+                <tr>
+                    <td><input type="checkbox" class="todo-check"></td>
+                    <td>some task title</td>
+                    <td><i class="fas fa-star"></i></td>
+                    <td><i class="fas fa-edit"></i></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="todo-card">
+            <table>
+                <tr>
+                    <td><input type="checkbox" class="todo-check"></td>
+                    <td>some task title</td>
+                    <td><i class="far fa-star"></i></td>
+                    <td><i class="fas fa-edit"></i></td>
+                </tr>
+            </table>
+
+        </div>
+        
+
+    </div>
+    
 
     <script src="index.js"></script>
 </body>
