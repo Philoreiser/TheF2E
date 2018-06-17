@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="bootstrap-4.1.0.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 LogoBox">
+                <div class="h4 Logo">HaveFun</div>
+            </div>
+            <div class="col-9">
+                <div class="row SearchBox">
+                    <div class="col SearchBox">
+                        <i class="fas fa-search"></i>
+                        <input id="search" name="search" type="text" placeholder="Explore your own activities" autocomplete="off" size="50">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="filter">
+                <div class="h4">Location</div>
+                <form>
+                    <select>
+                        <option>Taiwan</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="filter">
+                <div class="h4">Date</div>
+                <form>
+                    <label for="FromDate">from</label>
+                    <input id="FromDate" name="FromDate" type="date" placeholder="" autocomplete="on" value="2018-05-24"><br>
+                    <label for="ToDate">to</label>
+                    <input id="ToDate" name="ToDate" type="date" placeholder="" autocomplete="on" value="2018-06-01"><br>
+                </form>
+            </div>
+
+            <div class="filter">
+                <div class="h4">Category</div>
+                <form>
+                    <label>
+                        <input type="checkbox"><span>All</span>
+                    </label><br>
+                    <label>
+                        <input type="checkbox"><span>Entertainment</span>
+                    </label><br>
+                    <label>
+                        <input type="checkbox"><span>Food</span>
+                    </label><br>
+                    <label>
+                        <input type="checkbox"><span>Learning</span>
+                    </label><br>
+                    <label>
+                        <input type="checkbox"><span>Outdoors</span>
+                    </label><br>
+                </form>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="col h5">Showing 15 results by...</div>
+
+            </div>
+
+            <div class="row showbox">
+                <div class="col-3 image">
+                    <img src="https://picsum.photos/220/220?random=1">
+                </div>
+                <div class="col-9 infobox">
+                    <div class="info">
+                        <h1>In the tumultuous business.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus iaculis arcu, sit amet gravida dui semper quis. Pellentesque porta justo vitae sem maximus, nec dictum sapien sollicitudin. Aliquam congue vestibulum accumsan. Phasellus iaculis felis justo, a pellentesque magna lacinia sed.</p>
+                        <div class="box01">
+                            <div class="locationzone">Herman Cobb</div>
+                            <div class="categoriesname">Entertainment</div>
+                        </div>
+                        <div class="box02">
+                            <div class="locationname"><i class="fas fa-map-marker-alt"></i>Kaohsiung City</div>
+                            <div class="date"><i class="far fa-calendar-alt"></i>2018/5/24 - 2018/5/31</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row showbox">
+                <div class="col-3 image">
+                    <img src="https://picsum.photos/220/220?random=2">
+                </div>
+                <div class="col-9 infobox">
+                    <div class="info">
+                        <h1>Lorem Ipsum</h1>
+                        <p>Pellentesque efficitur fringilla elit nec fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ac molestie nunc. Maecenas justo purus, fringilla sed ante nec, auctor vestibulum urna. Donec nec tincidunt lacus.</p>
+                        <div class="box01">
+                            <div class="locationzone">Herman Cobb</div>
+                            <div class="categoriesname">Entertainment</div>
+                        </div>
+                        <div class="box02">
+                            <div class="locationname"><i class="fas fa-map-marker-alt"></i>Kaohsiung City</div>
+                            <div class="date"><i class="far fa-calendar-alt"></i>2018/5/24 - 2018/5/31</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row showbox">
+                <div class="col-3 image">
+                    <img src="https://picsum.photos/220/220?random=3">
+                </div>
+                <div class="col-9 infobox">
+                    <div class="info">
+                        <h1>Lorem Ipsum</h1>
+                        <p>Proin ullamcorper lacus eu arcu aliquet blandit. Phasellus faucibus lectus eu eros lobortis porta. Duis quis lobortis erat. Ut fringilla condimentum sodales. Phasellus mattis consequat est, quis fermentum dolor mollis sit amet.</p>
+                        <div class="box01">
+                            <div class="locationzone">Herman Cobb</div>
+                            <div class="categoriesname">Entertainment</div>
+                        </div>
+                        <div class="box02">
+                            <div class="locationname"><i class="fas fa-map-marker-alt"></i>Kaohsiung City</div>
+                            <div class="date"><i class="far fa-calendar-alt"></i>2018/5/24 - 2018/5/31</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row pagebox">
+                <div class="previous">«</div>
+                <div class="page active">1</div>
+                <div class="page">2</div>
+                <div class="page">3</div>
+                <div class="page">4</div>
+                <div class="page">5</div>
+                <div class="next">»</div>
+            </div>  -->
+        </div>
+
+        
+        
+    </div>
+    
+</div>
+</main>  
+</body>
+
+</html>
