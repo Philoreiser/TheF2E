@@ -79,6 +79,9 @@
                                     "border": "1px solid lightgray",
                                     "padding": "5px"
                                 });
+
+
+
                             } else {
                                 person.hide("slow");
                             }
@@ -86,6 +89,21 @@
                             // console.log(data);
                             // console.log(Date(data.timeStamp));
                         }
+                    });
+
+                    $.ajax({
+                        type: "post",
+                        url: "https://www.thef2e.com/api/stageCheck/",
+                        data: {
+                            "email": email
+                        },
+                        dataType: "json",
+                        error: function() {
+                            console.log("failed to verify");
+                        },
+                        success: function(data) {
+                            console.log(data);
+                        }                
                     });
 
                     event.preventDefault();
