@@ -1,0 +1,22 @@
+header {
+    background-color: black;
+    color: grey;
+    height: 2.5em;
+}
+
+header .Logo {
+    color: whitesmoke;
+}
+
+header .Login {
+    color: whitesmoke;
+}
+
+header .Feature {
+    text-align: left;
+}
+
+.Admin-feature {
+    display: inline;
+    
+}
